@@ -1,0 +1,26 @@
+android-jar = E:\SDK\android-sdk\sources\android-17\android.jar
+
+1.先复制好AndroidManifest.xml
+
+
+生成本包名的R文件
+----------------------------------------------------------
+aapt package -m -J gen -M AndroidManifest.xml -S res -S ..\PipawPayWapLibrary\res -I android-jar --auto-add-overlay
+
+
+生成依赖包的R文件
+-----------------------------------------------------------
+aapt package -m --non-constant-id --auto-add-overlay -J gen -M ..\PipawPayWapLibrary\AndroidManifest.xml -S res -S ..\PipawPayWapLibrary\res -I android-jar
+
+
+javac 
+
+dex 
+
+
+
+
+
+
+aapt -------->aidl --------------->compile-------->proguard-------->dex---------->package-res-and-assets---------->apk-builder
+R文件 -------->aidl --------------->编译-------->混淆-------->生成dex文件---------->打包res和assets---------->生成apk
