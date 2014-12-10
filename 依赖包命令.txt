@@ -16,8 +16,7 @@ aapt package -m --non-constant-id --auto-add-overlay -J gen -M ..\PipawPayWapLib
 javac 
 
 dex 
-
-
+´ò°ü
 
 
 
